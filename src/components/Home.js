@@ -3,7 +3,7 @@ import React from "react";
 const Home = (props) => {
     return (
         <div>
-            <h1>Welcome to the Billing App</h1>
+            <h1>Welcome to Billing App</h1>
 
             <>
 
