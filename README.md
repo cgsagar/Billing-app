@@ -18,7 +18,7 @@ This is a billing app that can be used for creating bills for a business. The bu
 - formic
 
 # Demo
-For Live Demo, Please click here: <a target="_blank" href="https://zippy-pavlova-bd2902.netlify.app/">DEMO</a>
+For Live Demo, Please click here: <a target="_blank" href="https://point-of-sales-billing.netlify.app/">DEMO</a>
 
 # Features
 
