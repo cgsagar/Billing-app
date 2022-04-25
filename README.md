@@ -6,7 +6,7 @@ This is a billing app that can be used for creating bills for a business. The bu
 # 🛠️ Tech Stack
 
 - 💻 JavaScript | ES6 | HTML | CSS
-- 🌐 React JS | Redux | Node JS | Express JS | Mongo DB
+- 🌐 React JS | Redux
 - 🔧 Git | Postman
 
 # Packages
