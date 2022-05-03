@@ -14,27 +14,30 @@ const Charts = props => {
         const result = bills.slice(-8).reverse().map((ele) => {
             return { date: ele.date.slice(0, 10), total: ele.total }
         })
-        setDesign(result)
+
+        const output = result.reduce((accumulator, cur) => {
+            let date = cur.date;
+            let found = accumulator.find(elem => elem.date == date)
+            if (found) found.total += cur.total;
+            else accumulator.push(cur);
+            return accumulator;
+        }, []);
+
+        setDesign(output)
     }, [bills])
 
 
     console.log('in', design);
 
 
-    const result = design.reduce((accumulator, cur) => {
-        let date = cur.date;
-        let found = accumulator.find(elem => elem.date == date)
-        if (found) found.total += cur.total;
-        else accumulator.push(cur);
-        return accumulator;
-    }, []);
+
 
     //console.log("out", result)
 
     return (
         <>
             <ResponsiveContainer width={'100%'} height={400}>
-                <LineChart data={result}>
+                <LineChart data={design}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="date" />
                     <YAxis />
